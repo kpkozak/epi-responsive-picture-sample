@@ -1,0 +1,20 @@
+﻿@using EPiServer.Core
+@using EPiServer.Framework.Web.Mvc.Html
+@using EPiServer.Globalization
+@using EPiServer.Web.Mvc.Html
+
+<!DOCTYPE html>
+<html lang="@ContentLanguage.PreferredCulture.Name">
+<head>
+    <title>Fictional company portfolio website</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    @Html.RequiredClientResources("Header")
+    @Html.RenderEPiServerQuickNavigator()
+</head>
+    <body>
+        @RenderBody()
+        @Html.RequiredClientResources("Footer")
+    </body>
+</html>
