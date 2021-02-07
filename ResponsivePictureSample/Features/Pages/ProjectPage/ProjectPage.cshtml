@@ -12,10 +12,13 @@
         </div>
         @Html.ImagePropertyFor(m=>m.MainImage, PictureProfiles.HeaderImage)
     </div>
+    <div class="content breadcrumb">
+                @Html.PropertyFor(x => x.ParentLink) > @Model.Title
+    </div>
     <div class="content description">
-        @Html.PropertyFor(x=>x.ParentLink) > @Model.Title
         @Html.PropertyFor(m => m.Description)
-
+    </div>
+    <div class="content images">
         @Html.PropertyFor(m => m.Images,
             new
             {
@@ -43,14 +46,42 @@
     }
     
     .header h1 {
-    position: absolute;
-    top: 50%;
-      z-index:2;
+        position: absolute;
+        top: 50%;
+        z-index:2;
     }
     
     .content {
         margin: auto;
         max-width: 1140px;
-        padding: 0 2em;
+    }
+    
+    .breadcrumb {
+        margin: 20px auto;
+    }
+    
+    .breadcrumb a {
+        color:  black;
+    }
+    
+    .description {
+        padding-top: 20px;
+        border-top: 1px solid gray;  
+    }
+    
+    .images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+        
+    .images img {
+        margin: 15px;
+        width: 45%;
+    }
+        
+    .images div {
+       display: inline;
     }
 </style>
