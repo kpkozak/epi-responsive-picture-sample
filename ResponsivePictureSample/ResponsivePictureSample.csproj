@@ -326,6 +326,10 @@
     <Compile Include="Features\Image\ImageController.cs" />
     <Compile Include="Features\Image\ImageUIDescriptor.cs" />
     <Compile Include="Features\Image\ImageViewModel.cs" />
+    <Compile Include="Features\Pages\ProjectListPage\ProjectListPage.cs" />
+    <Compile Include="Features\Pages\ProjectListPage\ProjectListPageController.cs" />
+    <Compile Include="Features\Pages\ProjectListPage\ProjectListPageViewModel.cs" />
+    <Compile Include="Features\Pages\ProjectListPage\ProjectTeaser.cs" />
     <Compile Include="Features\Pages\ProjectPage\HtmlHelperExtensions.cs" />
     <Compile Include="Features\Pages\ProjectPage\ProjectPage.cs" />
     <Compile Include="Features\Pages\ProjectPage\ProjectPageController.cs" />
@@ -333,6 +337,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\StructureMapDependencyInjectionRegistrationModule.cs" />
     <Compile Include="Infrastructure\FeatureViews\FeatureViewLocationRazorViewEngine.cs" />
     <Compile Include="Infrastructure\FeatureViews\FeatureViewLocationRazorViewEngineInitializationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -353,6 +358,8 @@
     <Content Include="express.js" />
     <Content Include="Features\Image\Image.cshtml" />
     <Content Include="Features\Layout.cshtml" />
+    <Content Include="Features\Pages\ProjectListPage\ProjectListPage.cshtml" />
+    <Compile Include="Features\Pages\ProjectListPage\ResponsiveImageViewModel.cs" />
     <Content Include="Features\Pages\ProjectPage\ProjectPage.cshtml" />
     <Content Include="Features\_ViewStart.cshtml" />
     <Content Include="modules\_protected\ImagePointEditor\ImagePointEditor.zip" />

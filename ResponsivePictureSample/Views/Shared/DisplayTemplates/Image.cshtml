@@ -1,5 +1,9 @@
+@using EPiServer.Core
 @using Forte.EpiResponsivePicture.ResizedImage
 @using ResponsivePictureSample.Features
 @model EPiServer.Core.ContentReference
 
-@Html.ResizedPicture(Model, PictureProfiles.CharacterImagesGallery);
+@if (!ContentReference.IsNullOrEmpty(Model))
+{
+    @Html.ResizedPicture(Model, PictureProfiles.XHtmlString)
+}

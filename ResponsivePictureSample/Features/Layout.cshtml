@@ -1,7 +1,8 @@
-﻿@using EPiServer.Core
+@using EPiServer.Core
 @using EPiServer.Framework.Web.Mvc.Html
 @using EPiServer.Globalization
 @using EPiServer.Web.Mvc.Html
+@using React.Web.Mvc
 
 <!DOCTYPE html>
 <html lang="@ContentLanguage.PreferredCulture.Name">
@@ -9,9 +10,21 @@
     <title>Fictional company portfolio website</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="/dist/js/bundle.min.js"></script>
     @Html.RequiredClientResources("Header")
     @Html.RenderEPiServerQuickNavigator()
+    
+    <style>
+        body {
+                margin: 0;
+                padding: 0;
+                font-family: "Roboto";
+            }
+    </style>
 </head>
     <body>
         @RenderBody()

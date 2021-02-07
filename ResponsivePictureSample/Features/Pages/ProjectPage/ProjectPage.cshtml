@@ -11,15 +11,15 @@
             </h1>
         </div>
         @Html.ImagePropertyFor(m=>m.MainImage, PictureProfiles.HeaderImage)
-        @* @Html.ResizedPicture(Model.MainImage, PictureProfiles.HeaderImage) <!-- rendering of the image --> *@
     </div>
     <div class="content description">
-        @Html.PropertyFor(m=>m.Description)
-        
-        @Html.PropertyFor(m=>m.Images, 
+        @Html.PropertyFor(x=>x.ParentLink) > @Model.Title
+        @Html.PropertyFor(m => m.Description)
+
+        @Html.PropertyFor(m => m.Images,
             new
             {
-                PictureProfile = PictureProfiles.CharacterImagesGallery
+                PictureProfile = PictureProfiles.ProjectImagesGallery
             })
     </div>
 </article>

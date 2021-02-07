@@ -3,6 +3,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Web;
+// ReSharper disable Mvc.TemplateNotResolved
 
 namespace ResponsivePictureSample.Features.Pages.ProjectPage
 {

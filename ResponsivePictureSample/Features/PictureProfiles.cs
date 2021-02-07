@@ -44,7 +44,7 @@ namespace ResponsivePictureSample.Features
             }
         };
 
-        public static readonly PictureProfile CharacterImagesGallery = new PictureProfile()
+        public static readonly PictureProfile ProjectImagesGallery = new PictureProfile()
         {
             Format = ResizedImageFormat.Jpg,
             DefaultWidth = 800,
