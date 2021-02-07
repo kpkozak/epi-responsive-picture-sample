@@ -21,10 +21,10 @@ export class ProjectList extends React.Component<{ profile: PictureProfile, proj
 
     render() {
         const projects = this.props.projects;
-        const filters = this.getFilters(projects)
-        const teasers = this.props.projects
+        const filters = this.getFilters(projects);
+        const teasers = projects
             .filter(x => (!this.state.selectedFilter) || x.categories.indexOf(this.state.selectedFilter) >= 0)
-            .map(x => ProjectList.getProjectTeaser(x, this.props.profile));
+            .map(x => ProjectList.renderProjectTeaser(x, this.props.profile));
         return <>
             {filters}
             <div className="teasers">   
@@ -33,7 +33,7 @@ export class ProjectList extends React.Component<{ profile: PictureProfile, proj
         </>
     }
 
-    private static getProjectTeaser(x: ProjectTeaser, profile: PictureProfile) {
+    private static renderProjectTeaser(x: ProjectTeaser, profile: PictureProfile) {
         return <div className="teaser">
             <a href={x.url} title={x.name}>
                 <div className="teaserImage">

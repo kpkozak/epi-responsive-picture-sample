@@ -2,8 +2,10 @@
 @using Forte.EpiResponsivePicture.ResizedImage
 @using ResponsivePictureSample.Features
 @model EPiServer.Core.ContentReference
-
+@{
+    var pictureProfile = ViewData["PictureProfile"] as PictureProfile ?? PictureProfiles.XHtmlString;
+}
 @if (!ContentReference.IsNullOrEmpty(Model))
 {
-    @Html.ResizedPicture(Model, PictureProfiles.XHtmlString)
+    @Html.ResizedPicture(Model, pictureProfile)
 }
