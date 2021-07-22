@@ -20,7 +20,8 @@ namespace ResponsivePictureSample.Features
                     {
                         "100vw"
                     },
-                    Quality = 60
+                    Quality = 60,
+                    
                 },
                 new PictureSource
                 {

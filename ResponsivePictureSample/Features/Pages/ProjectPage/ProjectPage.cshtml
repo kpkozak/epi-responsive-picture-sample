@@ -35,6 +35,12 @@
         background-color: black;
     }
     
+    @@media (max-width: 1024px) {
+      .header {
+        height: 100vh;
+      }
+    }
+    
     .header img {
         position: absolute;
         width: 100%;
@@ -56,6 +62,7 @@
     .content {
         margin: auto;
         max-width: 1140px;
+        padding:  12px;
     }
     
     .breadcrumb {
@@ -75,12 +82,11 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
     }
         
     .images img {
-        margin: 15px;
-        width: 45%;
+        margin: 10px;
+        width: 42%;
     }
         
     .images div {
